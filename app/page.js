@@ -17,20 +17,17 @@ function Logo({ size = 'md' }) {
     const width = size === 'lg' ? 220 : 180
 
       return (
-            <Image
-                  src="/Logo.png"
-                        alt="Mezbaan"
-                              width={width}
-                                    height={60}
-                                          priority
-                                                className="h-auto"
-                                                    />
-      )
-    }
-    
-      )
-}
-
+          <Image
+            src="/Logo.png"
+            alt="Mezbaan"
+            width={width}
+            height={60}
+            priority
+            className="h-auto"
+          />
+         )
+       }
+       
 function Navbar({ cartCount, onCartClick }) {
   const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
