@@ -22,7 +22,7 @@ function Logo({ size = 'md' }) {
           width={180}
             height={60}
               priority
-                className="h-12 w-auto"
+                className="h-14 w-auto"
                 />
   )
 }
