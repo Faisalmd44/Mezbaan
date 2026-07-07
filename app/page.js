@@ -16,15 +16,14 @@ const inr = (n) => `₹${n}`
 function Logo({ size = 'md' }) {
   const dim = size === 'lg' ? 'text-3xl' : 'text-xl'
   return (
-    <div className="flex items-center gap-2">
-      <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[color:var(--mez-yellow)] shadow-[0_6px_20px_-4px_rgba(255,199,44,0.6)]">
-        <Utensils className="w-5 h-5 text-black" strokeWidth={2.5} />
-      </div>
-      <div className="flex flex-col leading-none">
-        <span className={`font-black tracking-tight ${dim} text-white`}>MEZ<span className="text-[color:var(--mez-yellow)]">BAAN</span></span>
-        <span className="text-[10px] tracking-[0.25em] text-white/60 mt-0.5">EAT · ENJOY · REPEAT</span>
-      </div>
-    </div>
+    <Image
+      src="/Logo.png"
+        alt="Mezbaan"
+          width={180}
+            height={60}
+              priority
+                className="h-12 w-auto"
+                />
   )
 }
 
