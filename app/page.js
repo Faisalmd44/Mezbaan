@@ -14,20 +14,20 @@ import {
 const inr = (n) => `₹${n}`
 
 function Logo({ size = 'md' }) {
-    const width = size === 'lg' ? 220 : 180
+  const dim = size === 'lg' ? 'text-3xl' : 'text-xl'
+  return (
+    <div className="flex items-center gap-2">
+      <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-[color:var(--mez-yellow)] shadow-[0_6px_20px_-4px_rgba(255,199,44,0.6)]">
+        <Utensils className="w-5 h-5 text-black" strokeWidth={2.5} />
+      </div>
+      <div className="flex flex-col leading-none">
+        <span className={`font-black tracking-tight ${dim} text-white`}>MEZ<span className="text-[color:var(--mez-yellow)]">BAAN</span></span>
+        <span className="text-[10px] tracking-[0.25em] text-white/60 mt-0.5">EAT · ENJOY · REPEAT</span>
+      </div>
+    </div>
+  )
+}
 
-      return (
-          <Image
-            src="/Logo.png"
-            alt="Mezbaan"
-            width={width}
-            height={60}
-            priority
-            className="h-auto"
-          />
-         )
-       }
-       
 function Navbar({ cartCount, onCartClick }) {
   const [scrolled, setScrolled] = useState(false)
   useEffect(() => {
@@ -80,6 +80,27 @@ function Hero({ onOrder }) {
               <a href="#menu">View Menu</a>
             </Button>
           </div>
+
+          <div className="mt-4 flex flex-wrap gap-4">
+            <a
+              href="https://zomato.onelink.me/xqzv/pxqsyv83"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-3 shadow-lg transition-all"
+            >
+              🍽️ Order on Zomato
+            </a>
+
+            <a
+              href="https://www.instagram.com/mezbaann_?igsh=YTdzZXZ3MXNpazJ6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-white font-bold px-6 py-3 shadow-lg transition-all"
+            >
+              📷 Follow on Instagram
+            </a>
+          </div>
+
           <div className="mt-10 flex items-center gap-6 text-sm text-white/60">
             <div className="flex items-center gap-2"><Star className="w-4 h-4 text-[color:var(--mez-yellow)] fill-[color:var(--mez-yellow)]" /> 4.7 rated</div>
             <div className="flex items-center gap-2"><Flame className="w-4 h-4 text-[color:var(--mez-yellow)]" /> Fast delivery</div>
