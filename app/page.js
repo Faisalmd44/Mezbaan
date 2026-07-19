@@ -19,10 +19,10 @@ function Logo({ size = 'md' }) {
     <Image
       src="/Logo.png"
         alt="Mezbaan"
-          width={180}
-            height={60}
+          width={216}
+            height={72}
               priority
-                className="h-14 w-auto"
+                className="h-[68px] w-auto"
                 />
   )
 }
@@ -111,7 +111,7 @@ function Hero({ onOrder }) {
           <div className="absolute inset-0 rounded-full bg-[color:var(--mez-yellow)]/25 blur-3xl" />
           <div className="relative w-full h-full float-anim">
             <Image
-              src="https://images.unsplash.com/photo-1646926521204-01c01eae80ac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHllbGxvd3wxNzgyOTY5ODA0fDA&ixlib=rb-4.1.0&q=85&w=900"
+              src="https://images.pexels.com/photos/12325287/pexels-photo-12325287.jpeg?auto=compress&cs=tinysrgb&w=900"
               alt="Mezbaan signature burger"
               fill
               priority
@@ -144,7 +144,7 @@ function VegBadge({ veg }) {
 }
 
 function MenuCard({ item, qty, onAdd, onInc, onDec }) {
-  const fallback = 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80'
+  const fallback = 'https://images.pexels.com/photos/20535804/pexels-photo-20535804.jpeg?auto=compress&cs=tinysrgb&w=600'
   return (
     <div className="group bg-neutral-900 border border-white/5 hover:border-[color:var(--mez-yellow)]/50 rounded-2xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(255,199,44,0.3)]">
       <div className="relative h-44 bg-neutral-800 overflow-hidden">
@@ -306,7 +306,7 @@ function CartDrawer({ open, onClose, cart, onInc, onDec, onRemove }) {
           ) : items.map(i => (
             <div key={i.id} className="flex gap-3 bg-neutral-900 rounded-xl p-3 border border-white/5">
               <div className="w-14 h-14 rounded-lg bg-neutral-800 shrink-0 overflow-hidden">
-                <img src={i.image || 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&q=80'} alt="" className="w-full h-full object-cover" />
+                <img src={i.image || 'https://images.pexels.com/photos/20535804/pexels-photo-20535804.jpeg?auto=compress&cs=tinysrgb&w=200'} alt="" className="w-full h-full object-cover" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-2">
