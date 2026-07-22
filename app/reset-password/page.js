@@ -26,11 +26,18 @@ function ResetPasswordContent() {
     let cancelled = false
 
     async function restoreSession() {
-      const code = searchParams.get('code')
-      const token = searchParams.get('token')
-      const type = searchParams.get('type')
-      const accessToken = searchParams.get('access_token')
-      const refreshToken = searchParams.get('refresh_token')
+  const hash = new
+  URLSearchParams(window.location.hash.substring(1))
+
+  const code = searchParams.get('code')
+  const token = searchParams.get('token')
+  const type = searchParams.get('type') || hash.get('type')
+
+  const accessToken =
+  searchParams.get('access_token') || hash.get('access_token')
+
+  const refreshToken =
+  searchParams.get('refresh_token') || hash.get('refresh_token')
 
       // If access_token is present in the URL (older flow), set the session directly.
       if (accessToken && refreshToken) {
